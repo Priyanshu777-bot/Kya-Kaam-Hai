@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Accepted</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn-yes {
+            background-color: green;
+            color: white;
+        }
+        .btn-no {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Kya Tum Cute Ho?</h2>
+        <button class="btn-yes" onclick="showMessage('yes')">Yes</button>
+        <button class="btn-no" onclick="showMessage('no')">No</button>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        function showMessage(answer) {
+            if (answer === 'yes') {
+                document.getElementById("response").innerHTML = "Ye tumhara bharam hain, bharam se bahar aao";
+            } else {
+                document.getElementById("response").innerHTML = "Bilkul sahi.....";
+            }
+            document.querySelector('.btn-yes').disabled = true;
+            document.querySelector('.btn-no').disabled = true;
+        }
+    </script>
+
+</body>
+</html>
